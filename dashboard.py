@@ -83,6 +83,17 @@ with col2:
     top_table("GOBLIN SAPPER CHARGE", "goblin_sapper_charge")
 
 
+# === Necks ===
+st.subheader("💎 Necks")
+col1, col2, col3 = st.columns(3)
+with col1:
+    top_table("BRAIDED ETERNIUM CHAIN", "spell_braided_eternium_chain")
+with col2:
+    top_table("CHAIN OF THE TWILIGHT OWL", "spell_chain_of_the_twilight_owl")
+with col3:
+    top_table("EYE OF THE NIGHT", "spell_eye_of_the_night")
+
+
 # === Warriors ===
 st.subheader("⚔️ Warriors")
 col1, col2, col3, col4 = st.columns(4)
@@ -94,17 +105,6 @@ with col3:
     top_table("THUNDER CLAP", "spell_thunder_clap")
 with col4:
     top_table("PUMMEL", "spell_pummel")
-
-
-# === Necks ===
-st.subheader("💎 Necks")
-col1, col2, col3 = st.columns(3)
-with col1:
-    top_table("BRAIDED ETERNIUM CHAIN", "spell_braided_eternium_chain")
-with col2:
-    top_table("CHAIN OF THE TWILIGHT OWL", "spell_chain_of_the_twilight_owl")
-with col3:
-    top_table("EYE OF THE NIGHT", "spell_eye_of_the_night")
 
 
 # === Druids ===
