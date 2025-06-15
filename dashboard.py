@@ -159,5 +159,4 @@ with col3:
     top_table("DRUMS OF BATTLE", "spell_drums_of_battle")
 
 # === Resurrects ===
-st.subheader("✝️ Resurrects")
 top_table("Resurrects", "spell_resurrects")
