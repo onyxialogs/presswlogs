@@ -1,7 +1,7 @@
 {
   "report_info": {
     "url": "https://uwu-logs.xyz/reports/25-06-15--18-58--Xcope--Onyxia/",
-    "scraped_at": "2025-06-16T10:09:51.115285",
+    "scraped_at": "2025-06-16T11:13:29.760853",
     "date": "25-06-15",
     "time": "18-58",
     "player": "Xcope",
@@ -22,6 +22,7 @@
       "spell_mark_of_the_wild": 0,
       "spell_fortitude": 0,
       "spell_intellect": 0,
+      "spell_demonicdark_rune": 0,
       "spell_gift_of_the_wild": 0,
       "spell_power_word:_fortitude": 0,
       "spell_prayer_of_fortitude": 0,
@@ -54,6 +55,8 @@
       "spell_braided_eternium_chain": 0,
       "spell_chain_of_the_twilight_owl": 0,
       "spell_eye_of_the_night": 0,
+      "spell_dark_rune": 0,
+      "spell_demonic_rune": 0,
       "mana_potion": 0
     },
     {
@@ -74,6 +77,7 @@
       "spell_mark_of_the_wild": 0,
       "spell_fortitude": 0,
       "spell_intellect": 0,
+      "spell_demonicdark_rune": 5,
       "spell_gift_of_the_wild": 0,
       "spell_power_word:_fortitude": 0,
       "spell_prayer_of_fortitude": 0,
@@ -106,6 +110,8 @@
       "spell_braided_eternium_chain": 0,
       "spell_chain_of_the_twilight_owl": 2,
       "spell_eye_of_the_night": 2,
+      "spell_dark_rune": 0,
+      "spell_demonic_rune": 5,
       "mana_potion": 5
     },
     {
@@ -126,6 +132,7 @@
       "spell_mark_of_the_wild": 0,
       "spell_fortitude": 0,
       "spell_intellect": 141,
+      "spell_demonicdark_rune": 0,
       "spell_gift_of_the_wild": 0,
       "spell_power_word:_fortitude": 0,
       "spell_prayer_of_fortitude": 0,
@@ -158,6 +165,8 @@
       "spell_braided_eternium_chain": 0,
       "spell_chain_of_the_twilight_owl": 0,
       "spell_eye_of_the_night": 0,
+      "spell_dark_rune": 0,
+      "spell_demonic_rune": 0,
       "mana_potion": 1
     },
     {
@@ -178,6 +187,7 @@
       "spell_mark_of_the_wild": 0,
       "spell_fortitude": 0,
       "spell_intellect": 0,
+      "spell_demonicdark_rune": 0,
       "spell_gift_of_the_wild": 0,
       "spell_power_word:_fortitude": 0,
       "spell_prayer_of_fortitude": 0,
@@ -210,6 +220,8 @@
       "spell_braided_eternium_chain": 0,
       "spell_chain_of_the_twilight_owl": 0,
       "spell_eye_of_the_night": 3,
+      "spell_dark_rune": 0,
+      "spell_demonic_rune": 0,
       "mana_potion": 0
     },
     {
@@ -230,6 +242,7 @@
       "spell_mark_of_the_wild": 0,
       "spell_fortitude": 0,
       "spell_intellect": 0,
+      "spell_demonicdark_rune": 3,
       "spell_gift_of_the_wild": 0,
       "spell_power_word:_fortitude": 0,
       "spell_prayer_of_fortitude": 0,
@@ -262,6 +275,8 @@
       "spell_braided_eternium_chain": 1,
       "spell_chain_of_the_twilight_owl": 0,
       "spell_eye_of_the_night": 0,
+      "spell_dark_rune": 3,
+      "spell_demonic_rune": 0,
       "mana_potion": 1
     },
     {
@@ -282,6 +297,7 @@
       "spell_mark_of_the_wild": 0,
       "spell_fortitude": 0,
       "spell_intellect": 88,
+      "spell_demonicdark_rune": 0,
       "spell_gift_of_the_wild": 0,
       "spell_power_word:_fortitude": 0,
       "spell_prayer_of_fortitude": 0,
@@ -314,6 +330,8 @@
       "spell_braided_eternium_chain": 0,
       "spell_chain_of_the_twilight_owl": 1,
       "spell_eye_of_the_night": 0,
+      "spell_dark_rune": 0,
+      "spell_demonic_rune": 0,
       "mana_potion": 2
     },
     {
@@ -334,6 +352,7 @@
       "spell_mark_of_the_wild": 0,
       "spell_fortitude": 0,
       "spell_intellect": 0,
+      "spell_demonicdark_rune": 0,
       "spell_gift_of_the_wild": 0,
       "spell_power_word:_fortitude": 0,
       "spell_prayer_of_fortitude": 0,
@@ -366,6 +385,8 @@
       "spell_braided_eternium_chain": 0,
       "spell_chain_of_the_twilight_owl": 2,
       "spell_eye_of_the_night": 1,
+      "spell_dark_rune": 0,
+      "spell_demonic_rune": 0,
       "mana_potion": 0
     },
     {
@@ -386,6 +407,7 @@
       "spell_mark_of_the_wild": 0,
       "spell_fortitude": 0,
       "spell_intellect": 0,
+      "spell_demonicdark_rune": 6,
       "spell_gift_of_the_wild": 0,
       "spell_power_word:_fortitude": 0,
       "spell_prayer_of_fortitude": 0,
@@ -418,6 +440,8 @@
       "spell_braided_eternium_chain": 1,
       "spell_chain_of_the_twilight_owl": 0,
       "spell_eye_of_the_night": 0,
+      "spell_dark_rune": 6,
+      "spell_demonic_rune": 0,
       "mana_potion": 3
     },
     {
@@ -438,6 +462,7 @@
       "spell_mark_of_the_wild": 0,
       "spell_fortitude": 0,
       "spell_intellect": 0,
+      "spell_demonicdark_rune": 0,
       "spell_gift_of_the_wild": 0,
       "spell_power_word:_fortitude": 0,
       "spell_prayer_of_fortitude": 0,
@@ -470,6 +495,8 @@
       "spell_braided_eternium_chain": 1,
       "spell_chain_of_the_twilight_owl": 0,
       "spell_eye_of_the_night": 0,
+      "spell_dark_rune": 0,
+      "spell_demonic_rune": 0,
       "mana_potion": 0
     },
     {
@@ -490,6 +517,7 @@
       "spell_mark_of_the_wild": 0,
       "spell_fortitude": 0,
       "spell_intellect": 0,
+      "spell_demonicdark_rune": 8,
       "spell_gift_of_the_wild": 0,
       "spell_power_word:_fortitude": 0,
       "spell_prayer_of_fortitude": 0,
@@ -522,6 +550,8 @@
       "spell_braided_eternium_chain": 0,
       "spell_chain_of_the_twilight_owl": 0,
       "spell_eye_of_the_night": 0,
+      "spell_dark_rune": 8,
+      "spell_demonic_rune": 0,
       "mana_potion": 2
     },
     {
@@ -542,6 +572,7 @@
       "spell_mark_of_the_wild": 0,
       "spell_fortitude": 0,
       "spell_intellect": 0,
+      "spell_demonicdark_rune": 8,
       "spell_gift_of_the_wild": 0,
       "spell_power_word:_fortitude": 0,
       "spell_prayer_of_fortitude": 0,
@@ -574,6 +605,8 @@
       "spell_braided_eternium_chain": 0,
       "spell_chain_of_the_twilight_owl": 1,
       "spell_eye_of_the_night": 2,
+      "spell_dark_rune": 8,
+      "spell_demonic_rune": 0,
       "mana_potion": 8
     },
     {
@@ -594,6 +627,7 @@
       "spell_mark_of_the_wild": 0,
       "spell_fortitude": 0,
       "spell_intellect": 0,
+      "spell_demonicdark_rune": 2,
       "spell_gift_of_the_wild": 0,
       "spell_power_word:_fortitude": 0,
       "spell_prayer_of_fortitude": 0,
@@ -626,6 +660,8 @@
       "spell_braided_eternium_chain": 2,
       "spell_chain_of_the_twilight_owl": 0,
       "spell_eye_of_the_night": 0,
+      "spell_dark_rune": 2,
+      "spell_demonic_rune": 0,
       "mana_potion": 9
     },
     {
@@ -646,6 +682,7 @@
       "spell_mark_of_the_wild": 0,
       "spell_fortitude": 0,
       "spell_intellect": 0,
+      "spell_demonicdark_rune": 0,
       "spell_gift_of_the_wild": 0,
       "spell_power_word:_fortitude": 0,
       "spell_prayer_of_fortitude": 0,
@@ -678,6 +715,8 @@
       "spell_braided_eternium_chain": 0,
       "spell_chain_of_the_twilight_owl": 0,
       "spell_eye_of_the_night": 0,
+      "spell_dark_rune": 0,
+      "spell_demonic_rune": 0,
       "mana_potion": 0
     },
     {
@@ -698,6 +737,7 @@
       "spell_mark_of_the_wild": 0,
       "spell_fortitude": 0,
       "spell_intellect": 0,
+      "spell_demonicdark_rune": 0,
       "spell_gift_of_the_wild": 0,
       "spell_power_word:_fortitude": 0,
       "spell_prayer_of_fortitude": 0,
@@ -730,6 +770,8 @@
       "spell_braided_eternium_chain": 3,
       "spell_chain_of_the_twilight_owl": 0,
       "spell_eye_of_the_night": 0,
+      "spell_dark_rune": 0,
+      "spell_demonic_rune": 0,
       "mana_potion": 0
     },
     {
@@ -750,6 +792,7 @@
       "spell_mark_of_the_wild": 0,
       "spell_fortitude": 0,
       "spell_intellect": 0,
+      "spell_demonicdark_rune": 3,
       "spell_gift_of_the_wild": 0,
       "spell_power_word:_fortitude": 0,
       "spell_prayer_of_fortitude": 0,
@@ -782,6 +825,8 @@
       "spell_braided_eternium_chain": 0,
       "spell_chain_of_the_twilight_owl": 0,
       "spell_eye_of_the_night": 1,
+      "spell_dark_rune": 3,
+      "spell_demonic_rune": 0,
       "mana_potion": 16
     },
     {
@@ -802,6 +847,7 @@
       "spell_mark_of_the_wild": 0,
       "spell_fortitude": 0,
       "spell_intellect": 0,
+      "spell_demonicdark_rune": 0,
       "spell_gift_of_the_wild": 0,
       "spell_power_word:_fortitude": 0,
       "spell_prayer_of_fortitude": 0,
@@ -834,6 +880,8 @@
       "spell_braided_eternium_chain": 2,
       "spell_chain_of_the_twilight_owl": 0,
       "spell_eye_of_the_night": 0,
+      "spell_dark_rune": 0,
+      "spell_demonic_rune": 0,
       "mana_potion": 0
     },
     {
@@ -854,6 +902,7 @@
       "spell_mark_of_the_wild": 54,
       "spell_fortitude": 0,
       "spell_intellect": 0,
+      "spell_demonicdark_rune": 7,
       "spell_gift_of_the_wild": 33,
       "spell_power_word:_fortitude": 0,
       "spell_prayer_of_fortitude": 0,
@@ -886,6 +935,8 @@
       "spell_braided_eternium_chain": 0,
       "spell_chain_of_the_twilight_owl": 3,
       "spell_eye_of_the_night": 1,
+      "spell_dark_rune": 7,
+      "spell_demonic_rune": 0,
       "mana_potion": 8
     },
     {
@@ -906,6 +957,7 @@
       "spell_mark_of_the_wild": 0,
       "spell_fortitude": 0,
       "spell_intellect": 0,
+      "spell_demonicdark_rune": 3,
       "spell_gift_of_the_wild": 0,
       "spell_power_word:_fortitude": 0,
       "spell_prayer_of_fortitude": 0,
@@ -938,6 +990,8 @@
       "spell_braided_eternium_chain": 0,
       "spell_chain_of_the_twilight_owl": 0,
       "spell_eye_of_the_night": 0,
+      "spell_dark_rune": 3,
+      "spell_demonic_rune": 0,
       "mana_potion": 5
     },
     {
@@ -958,6 +1012,7 @@
       "spell_mark_of_the_wild": 1,
       "spell_fortitude": 0,
       "spell_intellect": 0,
+      "spell_demonicdark_rune": 0,
       "spell_gift_of_the_wild": 0,
       "spell_power_word:_fortitude": 0,
       "spell_prayer_of_fortitude": 0,
@@ -990,6 +1045,8 @@
       "spell_braided_eternium_chain": 4,
       "spell_chain_of_the_twilight_owl": 0,
       "spell_eye_of_the_night": 0,
+      "spell_dark_rune": 0,
+      "spell_demonic_rune": 0,
       "mana_potion": 0
     },
     {
@@ -1010,6 +1067,7 @@
       "spell_mark_of_the_wild": 0,
       "spell_fortitude": 0,
       "spell_intellect": 0,
+      "spell_demonicdark_rune": 0,
       "spell_gift_of_the_wild": 0,
       "spell_power_word:_fortitude": 0,
       "spell_prayer_of_fortitude": 0,
@@ -1042,6 +1100,8 @@
       "spell_braided_eternium_chain": 1,
       "spell_chain_of_the_twilight_owl": 0,
       "spell_eye_of_the_night": 0,
+      "spell_dark_rune": 0,
+      "spell_demonic_rune": 0,
       "mana_potion": 0
     },
     {
@@ -1062,6 +1122,7 @@
       "spell_mark_of_the_wild": 0,
       "spell_fortitude": 22,
       "spell_intellect": 0,
+      "spell_demonicdark_rune": 1,
       "spell_gift_of_the_wild": 0,
       "spell_power_word:_fortitude": 6,
       "spell_prayer_of_fortitude": 16,
@@ -1094,6 +1155,8 @@
       "spell_braided_eternium_chain": 0,
       "spell_chain_of_the_twilight_owl": 0,
       "spell_eye_of_the_night": 0,
+      "spell_dark_rune": 1,
+      "spell_demonic_rune": 0,
       "mana_potion": 5
     },
     {
@@ -1114,6 +1177,7 @@
       "spell_mark_of_the_wild": 0,
       "spell_fortitude": 0,
       "spell_intellect": 0,
+      "spell_demonicdark_rune": 0,
       "spell_gift_of_the_wild": 0,
       "spell_power_word:_fortitude": 0,
       "spell_prayer_of_fortitude": 0,
@@ -1146,6 +1210,8 @@
       "spell_braided_eternium_chain": 0,
       "spell_chain_of_the_twilight_owl": 0,
       "spell_eye_of_the_night": 0,
+      "spell_dark_rune": 0,
+      "spell_demonic_rune": 0,
       "mana_potion": 3
     },
     {
@@ -1166,6 +1232,7 @@
       "spell_mark_of_the_wild": 0,
       "spell_fortitude": 357,
       "spell_intellect": 0,
+      "spell_demonicdark_rune": 0,
       "spell_gift_of_the_wild": 0,
       "spell_power_word:_fortitude": 0,
       "spell_prayer_of_fortitude": 357,
@@ -1198,6 +1265,8 @@
       "spell_braided_eternium_chain": 0,
       "spell_chain_of_the_twilight_owl": 0,
       "spell_eye_of_the_night": 0,
+      "spell_dark_rune": 0,
+      "spell_demonic_rune": 0,
       "mana_potion": 13
     },
     {
@@ -1218,6 +1287,7 @@
       "spell_mark_of_the_wild": 0,
       "spell_fortitude": 0,
       "spell_intellect": 0,
+      "spell_demonicdark_rune": 4,
       "spell_gift_of_the_wild": 0,
       "spell_power_word:_fortitude": 0,
       "spell_prayer_of_fortitude": 0,
@@ -1250,6 +1320,8 @@
       "spell_braided_eternium_chain": 0,
       "spell_chain_of_the_twilight_owl": 0,
       "spell_eye_of_the_night": 0,
+      "spell_dark_rune": 4,
+      "spell_demonic_rune": 0,
       "mana_potion": 9
     },
     {
@@ -1270,6 +1342,7 @@
       "spell_mark_of_the_wild": 200,
       "spell_fortitude": 0,
       "spell_intellect": 0,
+      "spell_demonicdark_rune": 0,
       "spell_gift_of_the_wild": 147,
       "spell_power_word:_fortitude": 0,
       "spell_prayer_of_fortitude": 0,
@@ -1302,6 +1375,8 @@
       "spell_braided_eternium_chain": 0,
       "spell_chain_of_the_twilight_owl": 0,
       "spell_eye_of_the_night": 0,
+      "spell_dark_rune": 0,
+      "spell_demonic_rune": 0,
       "mana_potion": 0
     },
     {
@@ -1322,6 +1397,7 @@
       "spell_mark_of_the_wild": 0,
       "spell_fortitude": 0,
       "spell_intellect": 0,
+      "spell_demonicdark_rune": 13,
       "spell_gift_of_the_wild": 0,
       "spell_power_word:_fortitude": 0,
       "spell_prayer_of_fortitude": 0,
@@ -1354,6 +1430,8 @@
       "spell_braided_eternium_chain": 0,
       "spell_chain_of_the_twilight_owl": 0,
       "spell_eye_of_the_night": 0,
+      "spell_dark_rune": 13,
+      "spell_demonic_rune": 0,
       "mana_potion": 18
     }
   ],
