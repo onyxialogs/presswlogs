@@ -142,13 +142,16 @@ with col4:
 
 
 # === Sappers ===
-st.subheader("💥 Sappers")
-col1, col2 = st.columns(2)
+st.subheader("💥 Sappers/bombs")
+col1, col2, col3, col4 = st.columns(4)
 with col1:
     top_table("SUPER SAPPER CHARGE", "super_sapper_charge")
 with col2:
     top_table("GOBLIN SAPPER CHARGE", "goblin_sapper_charge")
-
+with col3:
+    top_table("ARCANE BOMB", "spell_arcane_bomb")
+with col4:
+    top_table("FEL IRON BOMB", "spell_fel_iron_bomb")
 
 # === Necks ===
 st.subheader("💎 Necks")
@@ -180,6 +183,8 @@ with col2:
     top_table("INSECT SWARM", "spell_insect_swarm")
 with col3:
     top_table("INNERVATE", "spell_innervate")
+with col4:
+    top_table("NATURE'S SWIFTNESS", "spell_natures_swiftnessd")
 
 
 # === Warlocks ===
@@ -224,21 +229,23 @@ with col3:
 
 # === Other ===
 st.subheader("🎭 Other")
-col1, col2, col3, col4, col5 = st.columns(5)
+col1, col2, col3, col4= st.columns(4)
 with col1:
     top_table("SCROLL OF STRENGTH", "spell_scroll_of_strength")
 with col2:
     top_table("SCROLL OF AGILITY", "spell_scroll_of_agility")
 with col3:
-    top_table("DRUMS", "spell_drums")
-with col4:
     top_table("DEMONIC/DARK RUNE", "spell_demonicdark_rune")
-with col5:
+with col4:
     top_table("NIGHTMARE SEED", "spell_nightmare_seed")
 
-# === Resurrects ===
-col1, col2 = st.columns(2)
+
+col1, col2, col3, col4 = st.columns(4)
 with col1:
     top_table("RESURRECTS", "spell_resurrects")
 with col2:
     top_table("INTERRUPTS", "spell_interrupts")
+with col3:
+    top_table("ANNIHILATOR", "spell_annihilator")
+with col4:
+    top_table("DRUMS", "spell_drums")
