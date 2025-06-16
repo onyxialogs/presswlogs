@@ -162,15 +162,13 @@ with col3:
 
 # === Warriors ===
 st.subheader("⚔️ Warriors")
-col1, col2, col3, col4 = st.columns(4)
+col1, col2, col3 = st.columns(3)
 with col1:
     top_table("SUNDER ARMOR", "spell_sunder_armor")
 with col2:
     top_table("DEMORALIZING SHOUT", "spell_demoralizing_shout")
 with col3:
     top_table("THUNDER CLAP", "spell_thunder_clap")
-with col4:
-    top_table("PUMMEL", "spell_pummel")
 
 
 # === Druids ===
@@ -226,16 +224,21 @@ with col3:
 
 # === Other ===
 st.subheader("🎭 Other")
-col1, col2, col3, col4 = st.columns(4)
+col1, col2, col3, col4, col5 = st.columns(5)
 with col1:
     top_table("SCROLL OF STRENGTH", "spell_scroll_of_strength")
 with col2:
     top_table("SCROLL OF AGILITY", "spell_scroll_of_agility")
 with col3:
-    top_table("DRUMS OF BATTLE", "spell_drums_of_battle")
+    top_table("DRUMS", "spell_drums")
 with col4:
     top_table("DEMONIC/DARK RUNE", "spell_demonicdark_rune")
-
+with col5:
+    top_table("NIGHTMARE SEED", "spell_nightmare_seed")
 
 # === Resurrects ===
-top_table("RESURRECTS", "spell_resurrects")
+col1, col2 = st.columns(2)
+with col1:
+    top_table("RESURRECTS", "spell_resurrects")
+with col2:
+    top_table("INTERRUPTS", "spell_interrupts")
