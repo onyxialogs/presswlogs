@@ -8,11 +8,25 @@ from pathlib import Path
 st.set_page_config(layout="wide")
 st.title("📊 Raid Performance Dashboard")
 
+all_players = []
 # List all /reports/**/report.json files
 report_paths = sorted(Path("reports").rglob("report.json"))
 report_options = [str(path) for path in report_paths]
 selected_report = st.selectbox("📂 Select a report:", report_options)
 
+# Iterate and combine all report.json data
+for path in report_paths:
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            report = json.load(f)
+            players = report.get("players", [])
+            for player in players:
+                if player["name"] != "Total":
+                    player["report_name"] = str(path.parent.name)  # Add report identifier
+                    all_players.append(player)
+    except Exception as e:
+        st.warning(f"Could not load {path}: {e}")
+df_all = pd.DataFrame(all_players)
 # Load selected report
 try:
     with open(selected_report, "r", encoding="utf-8") as f:
@@ -147,6 +161,16 @@ with col4:
     top_table("PURGE", "spell_purge")
 
 
+st.subheader("✨ Buffs")
+col1, col2, col3 = st.columns(3)
+with col1:
+    top_table("FORTITUDE", "spell_fortitude")
+with col2:
+    top_table("INTELLECT", "spell_intellect")
+with col3:
+    top_table("MOTW", "spell_mark_of_the_wild")
+
+
 # === Other ===
 st.subheader("🎭 Other")
 col1, col2, col3 = st.columns(3)
@@ -157,14 +181,18 @@ with col2:
 with col3:
     top_table("DRUMS OF BATTLE", "spell_drums_of_battle")
 
-st.subheader("✨ Buffs")
-col1, col2, col3 = st.columns(3)
-with col1:
-    top_table("FORTITUDE", "spell_fortitude")
-with col2:
-    top_table("INTELLECT", "spell_intellect")
-with col3:
-    top_table("MOTW", "spell_mark_of_the_wild")
 
 # === Resurrects ===
-top_table("Resurrects", "spell_resurrects")
+top_table("RESURRECTS", "spell_resurrects")
+
+st.subheader("📈 Overall Statistics")
+
+# Top 10 DPS across all raids
+top_dps = df_all.sort_values(by="dps", ascending=False).head(10)
+st.markdown("### 🔝 Top 10 DPS")
+st.dataframe(top_dps[["name", "dps", "report_name"]])
+
+# Average DPS by player
+avg_dps = df_all.groupby("name")["dps"].mean().sort_values(ascending=False).reset_index()
+st.markdown("### 📊 Average DPS by Player")
+st.dataframe(avg_dps.head(10))
