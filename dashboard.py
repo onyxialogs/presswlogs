@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import numpy as np
 import json
 from pathlib import Path
 
@@ -10,33 +11,88 @@ st.title("📊 Raid Performance Dashboard")
 
 all_players = []
 # List all /reports/**/report.json files
-report_paths = sorted(Path("reports").rglob("report.json"))
-report_options = [str(path) for path in report_paths]
-selected_report = st.selectbox("📂 Select a report:", report_options)
+report_paths = sorted(Path("reports").rglob("report.json"), reverse=True)  # Newest first
+# Create clean report names (remove "reports/" prefix)
+clean_report_names = [str(path.parent.name) for path in report_paths]
 
-# Iterate and combine all report.json data
+# Create mapping from clean names back to full paths
+name_to_path = {str(path.parent.name): str(path) for path in report_paths}
+
+# Report selection options
+st.markdown("### 📂 Report Selection")
+
+# Selection mode in a row at the top
+selection_mode = st.radio(
+    "Selection mode:",
+    ["📈 All Reports", "📋 Single Report", "🎯 Multiple Reports"],
+    horizontal=True,  # Display options in a row
+    index=1  # Default to single report
+)
+
+# Report selection below
+if selection_mode == "📋 Single Report":
+    selected_report = st.selectbox("Select a report:", clean_report_names, index=0)
+    selected_reports = [selected_report]
+elif selection_mode == "🎯 Multiple Reports":
+    selected_reports = st.multiselect(
+        "Select multiple reports:", 
+        clean_report_names,
+        default=clean_report_names[:3]  # Default to 3 newest reports
+    )
+    if not selected_reports:
+        st.warning("Please select at least one report.")
+        st.stop()
+else:  # All Reports
+    selected_reports = clean_report_names
+
+# Iterate and combine data from selected reports only
 for path in report_paths:
-    try:
-        with open(path, "r", encoding="utf-8") as f:
-            report = json.load(f)
+    report_name = str(path.parent.name)
+    if report_name in selected_reports:  # Only load selected reports
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                report = json.load(f)
             players = report.get("players", [])
             for player in players:
                 if player["name"] != "Total":
-                    player["report_name"] = str(path.parent.name)  # Add report identifier
+                    player["report_name"] = report_name
                     all_players.append(player)
-    except Exception as e:
-        st.warning(f"Could not load {path}: {e}")
+        except Exception as e:
+            st.warning(f"Could not load {path}: {e}")
+
 df_all = pd.DataFrame(all_players)
-# Load selected report
-try:
-    with open(selected_report, "r", encoding="utf-8") as f:
-        data = json.load(f)
-    df = pd.DataFrame(data["players"])
-    df = df[df["name"] != "Total"]
-except Exception as e:
-    st.error(f"Failed to load {selected_report}: {e}")
-    st.stop()
+
+# Load data based on selection
+if selection_mode == "📋 Single Report":
+    # Load single report without aggregation
+    if df_all.empty:
+        st.error("No valid report data found.")
+        st.stop()
+    df = df_all.copy()
+else:
+    # Multiple reports or all reports - aggregate data
+    if df_all.empty:
+        st.error("No valid report data found.")
+        st.stop()
     
+    # Aggregate numeric columns by player name
+    numeric_columns = df_all.select_dtypes(include=[np.number]).columns.tolist()
+    
+    # Group by player name and sum numeric values
+    df_aggregated = df_all.groupby('name').agg({
+        **{col: 'sum' for col in numeric_columns},
+        'report_name': lambda x: ', '.join(sorted(set(x)))  # Combine report names
+    }).reset_index()
+    
+    # Keep any non-numeric columns from the first occurrence
+    non_numeric_cols = [col for col in df_all.columns if col not in numeric_columns + ['name', 'report_name']]
+    if non_numeric_cols:
+        first_occurrence = df_all.groupby('name')[non_numeric_cols].first().reset_index()
+        df = df_aggregated.merge(first_occurrence, on='name', how='left')
+    else:
+        df = df_aggregated
+
+
 
 def top_table(title, column, n=20, column_display_name="used"):
     st.markdown(f"**{title}**")
@@ -173,26 +229,16 @@ with col3:
 
 # === Other ===
 st.subheader("🎭 Other")
-col1, col2, col3 = st.columns(3)
+col1, col2, col3, col4 = st.columns(4)
 with col1:
     top_table("SCROLL OF STRENGTH", "spell_scroll_of_strength")
 with col2:
     top_table("SCROLL OF AGILITY", "spell_scroll_of_agility")
 with col3:
     top_table("DRUMS OF BATTLE", "spell_drums_of_battle")
+with col4:
+    top_table("DEMONIC/DARK RUNE", "spell_demonicdark_rune")
 
 
 # === Resurrects ===
 top_table("RESURRECTS", "spell_resurrects")
-
-st.subheader("📈 Overall Statistics")
-
-# Top 10 DPS across all raids
-top_dps = df_all.sort_values(by="dps", ascending=False).head(10)
-st.markdown("### 🔝 Top 10 DPS")
-st.dataframe(top_dps[["name", "dps", "report_name"]])
-
-# Average DPS by player
-avg_dps = df_all.groupby("name")["dps"].mean().sort_values(ascending=False).reset_index()
-st.markdown("### 📊 Average DPS by Player")
-st.dataframe(avg_dps.head(10))
