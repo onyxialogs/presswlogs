@@ -18,13 +18,10 @@ clean_report_names = [str(path.parent.name) for path in report_paths]
 # Create mapping from clean names back to full paths
 name_to_path = {str(path.parent.name): str(path) for path in report_paths}
 
-# Report selection options
-st.markdown("### 📂 Report Selection")
-
 # Selection mode in a row at the top
 selection_mode = st.radio(
     "Selection mode:",
-    ["📈 All Reports", "📋 Single Report", "🎯 Multiple Reports"],
+    ["All Reports", "Single Report", "Multiple Reports"],
     horizontal=True,  # Display options in a row
     index=1  # Default to single report
 )
