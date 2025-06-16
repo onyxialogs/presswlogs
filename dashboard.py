@@ -18,6 +18,9 @@ clean_report_names = [str(path.parent.name) for path in report_paths]
 # Create mapping from clean names back to full paths
 name_to_path = {str(path.parent.name): str(path) for path in report_paths}
 
+# Report selection options
+st.markdown("### 📂 Report Selection")
+
 # Selection mode in a row at the top
 selection_mode = st.radio(
     "Selection mode:",
@@ -27,10 +30,10 @@ selection_mode = st.radio(
 )
 
 # Report selection below
-if selection_mode == "📋 Single Report":
+if selection_mode == "Single Report":
     selected_report = st.selectbox("Select a report:", clean_report_names, index=0)
     selected_reports = [selected_report]
-elif selection_mode == "🎯 Multiple Reports":
+elif selection_mode == "Multiple Reports":
     selected_reports = st.multiselect(
         "Select multiple reports:", 
         clean_report_names,
@@ -60,7 +63,7 @@ for path in report_paths:
 df_all = pd.DataFrame(all_players)
 
 # Load data based on selection
-if selection_mode == "📋 Single Report":
+if selection_mode == "Single Report":
     # Load single report without aggregation
     if df_all.empty:
         st.error("No valid report data found.")
