@@ -18,9 +18,6 @@ clean_report_names = [str(path.parent.name) for path in report_paths]
 # Create mapping from clean names back to full paths
 name_to_path = {str(path.parent.name): str(path) for path in report_paths}
 
-# Report selection options
-st.markdown("### 📂 Report Selection")
-
 # Selection mode in a row at the top
 selection_mode = st.radio(
     "Selection mode:",
