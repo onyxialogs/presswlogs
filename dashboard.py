@@ -5,20 +5,10 @@ import json
 from pathlib import Path
 
 
-# Get list of all report.json files in /reports subfolders
 st.set_page_config(layout="wide")
 st.title("📊 Raid Performance Dashboard")
 
-all_players = []
-# List all /reports/**/report.json files
-report_paths = sorted(Path("reports").rglob("report.json"), reverse=True)  # Newest first
-# Create clean report names (remove "reports/" prefix)
-clean_report_names = [str(path.parent.name) for path in report_paths]
-
-# Create mapping from clean names back to full paths
-name_to_path = {str(path.parent.name): str(path) for path in report_paths}
-
-# Selection mode in a row at the top
+# Selection mode
 selection_mode = st.radio(
     "Selection mode:",
     ["All Reports", "Single Report", "Multiple Reports"],
@@ -26,7 +16,11 @@ selection_mode = st.radio(
     index=1  # Default to single report
 )
 
-# Report selection below
+# Reports selection
+report_paths = sorted(Path("reports").rglob("report.json"), reverse=True)
+clean_report_names = [str(path.parent.name) for path in report_paths]
+name_to_path = {str(path.parent.name): str(path) for path in report_paths}
+
 if selection_mode == "Single Report":
     selected_report = st.selectbox("Select a report:", clean_report_names, index=0)
     selected_reports = [selected_report]
@@ -34,7 +28,7 @@ elif selection_mode == "Multiple Reports":
     selected_reports = st.multiselect(
         "Select multiple reports:", 
         clean_report_names,
-        default=clean_report_names[:3]  # Default to 3 newest reports
+        default=clean_report_names[:3]
     )
     if not selected_reports:
         st.warning("Please select at least one report.")
@@ -43,6 +37,7 @@ else:  # All Reports
     selected_reports = clean_report_names
 
 # Iterate and combine data from selected reports only
+all_players = []
 for path in report_paths:
     report_name = str(path.parent.name)
     if report_name in selected_reports:  # Only load selected reports
@@ -61,13 +56,11 @@ df_all = pd.DataFrame(all_players)
 
 # Load data based on selection
 if selection_mode == "Single Report":
-    # Load single report without aggregation
     if df_all.empty:
         st.error("No valid report data found.")
         st.stop()
     df = df_all.copy()
 else:
-    # Multiple reports or all reports - aggregate data
     if df_all.empty:
         st.error("No valid report data found.")
         st.stop()
@@ -80,7 +73,7 @@ else:
         **{col: 'sum' for col in numeric_columns},
         'report_name': lambda x: ', '.join(sorted(set(x)))  # Combine report names
     }).reset_index()
-    
+
     # Keep any non-numeric columns from the first occurrence
     non_numeric_cols = [col for col in df_all.columns if col not in numeric_columns + ['name', 'report_name']]
     if non_numeric_cols:
@@ -90,7 +83,7 @@ else:
         df = df_aggregated
 
 
-
+# Create top tables
 def top_table(title, column, n=20, column_display_name="used"):
     st.markdown(f"**{title}**")
     sorted_df = (
@@ -117,7 +110,6 @@ def bar_chart(title, column, n=10):
     # Add invisible ranking characters (spaces) to maintain order
     chart_data['ranked_name'] = [f"{' ' * (n-i)}{name}" for i, name in enumerate(chart_data['name'])]
     chart_data = chart_data.set_index('ranked_name')[column]
-    
     st.bar_chart(chart_data)
 
 # === DPS / HPS Bar Charts ===
@@ -126,7 +118,6 @@ with col1:
     bar_chart("Top 10 Damage Dealers (DPS)", "dps", n=10)
 with col2:
     bar_chart("Top 5 Healers (HPS)", "hps", n=5)
-
 
 # === Potion Usage ===
 st.subheader("🧪 Potions")
@@ -140,7 +131,6 @@ with col3:
 with col4:
     top_table("MANA POTION", "mana_potion")
 
-
 # === Sappers ===
 st.subheader("💥 Sappers/bombs")
 col1, col2, col3, col4 = st.columns(4)
@@ -153,26 +143,17 @@ with col3:
 with col4:
     top_table("FEL IRON BOMB", "spell_fel_iron_bomb")
 
-# === Necks ===
-st.subheader("💎 Necks")
-col1, col2, col3 = st.columns(3)
-with col1:
-    top_table("BRAIDED ETERNIUM CHAIN", "spell_braided_eternium_chain")
-with col2:
-    top_table("CHAIN OF THE TWILIGHT OWL", "spell_chain_of_the_twilight_owl")
-with col3:
-    top_table("EYE OF THE NIGHT", "spell_eye_of_the_night")
-
 # === Warriors ===
 st.subheader("⚔️ Warriors")
-col1, col2, col3 = st.columns(3)
+col1, col2, col3, col4 = st.columns(4)
 with col1:
     top_table("SUNDER ARMOR", "spell_sunder_armor")
 with col2:
     top_table("DEMORALIZING SHOUT", "spell_demoralizing_shout")
 with col3:
     top_table("THUNDER CLAP", "spell_thunder_clap")
-
+with col4:
+    top_table("BS/COM SHOUT", "spell_shouts")
 
 # === Druids ===
 st.subheader("🐻 Druids")
@@ -186,46 +167,55 @@ with col3:
 with col4:
     top_table("NATURE'S SWIFTNESS", "spell_natures_swiftnessd")
 
-
 # === Warlocks ===
 st.subheader("💀 Warlocks")
-col1, col2, col3, col4, col5, col6 = st.columns(6)
+col1, col2, col3 = st.columns(3)
 with col1:
     top_table("CURSE OF THE ELEMENTS", "spell_curse_of_the_elements")
 with col2:
     top_table("CURSE OF RECKLESSNESS", "spell_curse_of_recklessness")
 with col3:
-    top_table("CURSE OF TONGUES", "spell_curse_of_tongues")
-with col4:
-    top_table("CURSE OF AGONY", "spell_curse_of_agony")
-with col5:
     top_table("CURSE OF DOOM", "spell_curse_of_doom")
-with col6:
+    
+col1, col2, col3 = st.columns(3)
+with col1:
+    top_table("CURSE OF AGONY", "spell_curse_of_agony")
+with col2:
+    top_table("CURSE OF TONGUES", "spell_curse_of_tongues")
+with col3:
     top_table("SHADOW VULNERABILITY", "spell_shadow_vulnerability")
-
 
 # === Shamans ===
 st.subheader("🌀 Shamans")
-col1, col2, col3, col4 = st.columns(4)
+col1, col2, col3 = st.columns(3)
 with col1:
     top_table("BLOODLUST", "spell_bloodlust")
 with col2:
     top_table("MANA TIDE TOTEM", "spell_mana_tide_totem")
 with col3:
     top_table("NATURE'S SWIFTNESS", "spell_natures_swiftness")
-with col4:
-    top_table("PURGE", "spell_purge")
 
-
-st.subheader("✨ Buffs")
+# === Necks ===
+st.subheader("💎 Necks")
 col1, col2, col3 = st.columns(3)
+with col1:
+    top_table("BRAIDED ETERNIUM CHAIN", "spell_braided_eternium_chain")
+with col2:
+    top_table("CHAIN OF THE TWILIGHT OWL", "spell_chain_of_the_twilight_owl")
+with col3:
+    top_table("EYE OF THE NIGHT", "spell_eye_of_the_night")
+
+# === Buffs ===
+st.subheader("✨ Buffs/dispels")
+col1, col2, col3,col4 = st.columns(4)
 with col1:
     top_table("FORTITUDE", "spell_fortitude")
 with col2:
     top_table("INTELLECT", "spell_intellect")
 with col3:
     top_table("MOTW", "spell_mark_of_the_wild")
-
+with col4:
+    top_table("DISPELS", "spell_dispels")
 
 # === Other ===
 st.subheader("🎭 Other")
@@ -239,13 +229,12 @@ with col3:
 with col4:
     top_table("NIGHTMARE SEED", "spell_nightmare_seed")
 
-
 col1, col2, col3, col4 = st.columns(4)
 with col1:
     top_table("RESURRECTS", "spell_resurrects")
 with col2:
     top_table("INTERRUPTS", "spell_interrupts")
 with col3:
-    top_table("ANNIHILATOR", "spell_annihilator")
-with col4:
     top_table("DRUMS", "spell_drums")
+with col4:
+    top_table("ANNIHILATOR", "spell_annihilator")   
