@@ -98,6 +98,8 @@ def top_table(title, column, n=20, column_display_name="used"):
     
     st.dataframe(sorted_df, use_container_width=True, hide_index=True)
 
+
+
 def bar_chart(title, column, n=10):
     st.subheader(title)
     chart_data = (
@@ -141,7 +143,7 @@ with col2:
 with col3:
     top_table("ARCANE BOMB", "spell_arcane_bomb")
 with col4:
-    top_table("FEL IRON BOMB", "spell_fel_iron_bomb")
+    top_table("FEL/ADA BOMB", "spell_feladabomb")
 
 # === Warriors ===
 st.subheader("⚔️ Warriors")
