@@ -231,7 +231,7 @@ with col3:
 with col4:
     top_table("NIGHTMARE SEED", "spell_nightmare_seed")
 
-col1, col2, col3, col4 = st.columns(4)
+col1, col2, col3, col4, col5 = st.columns(5)
 with col1:
     top_table("RESURRECTS", "spell_resurrects")
 with col2:
@@ -240,3 +240,5 @@ with col3:
     top_table("DRUMS", "spell_drums")
 with col4:
     top_table("ANNIHILATOR", "spell_annihilator")   
+with col5:
+    top_table("MISDIRECTION", "spell_misdirection")
