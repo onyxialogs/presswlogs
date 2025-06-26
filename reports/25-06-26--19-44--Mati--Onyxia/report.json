@@ -1,7 +1,7 @@
 {
   "report_info": {
     "url": "https://uwu-logs.xyz/reports/25-06-26--19-44--Mati--Onyxia",
-    "scraped_at": "2025-06-26T20:59:38.840144",
+    "scraped_at": "2025-06-27T00:08:33.097328",
     "date": "25-06-26",
     "time": "19-44",
     "player": "Mati",
@@ -92,6 +92,7 @@
       "spell_tranquilizing_shot": 0,
       "spell_commanding_shout": 0,
       "spell_battle_shout": 0,
+      "spell_misdirection": 0,
       "mana_potion": 0
     },
     {
@@ -182,6 +183,7 @@
       "spell_tranquilizing_shot": 0,
       "spell_commanding_shout": 0,
       "spell_battle_shout": 0,
+      "spell_misdirection": 0,
       "mana_potion": 13
     },
     {
@@ -272,6 +274,7 @@
       "spell_tranquilizing_shot": 1,
       "spell_commanding_shout": 0,
       "spell_battle_shout": 0,
+      "spell_misdirection": 26,
       "mana_potion": 7
     },
     {
@@ -362,6 +365,7 @@
       "spell_tranquilizing_shot": 0,
       "spell_commanding_shout": 0,
       "spell_battle_shout": 0,
+      "spell_misdirection": 0,
       "mana_potion": 0
     },
     {
@@ -452,6 +456,7 @@
       "spell_tranquilizing_shot": 0,
       "spell_commanding_shout": 0,
       "spell_battle_shout": 81,
+      "spell_misdirection": 0,
       "mana_potion": 0
     },
     {
@@ -542,6 +547,7 @@
       "spell_tranquilizing_shot": 3,
       "spell_commanding_shout": 0,
       "spell_battle_shout": 0,
+      "spell_misdirection": 33,
       "mana_potion": 7
     },
     {
@@ -632,6 +638,7 @@
       "spell_tranquilizing_shot": 0,
       "spell_commanding_shout": 0,
       "spell_battle_shout": 0,
+      "spell_misdirection": 17,
       "mana_potion": 7
     },
     {
@@ -722,6 +729,7 @@
       "spell_tranquilizing_shot": 0,
       "spell_commanding_shout": 0,
       "spell_battle_shout": 0,
+      "spell_misdirection": 0,
       "mana_potion": 1
     },
     {
@@ -812,6 +820,7 @@
       "spell_tranquilizing_shot": 0,
       "spell_commanding_shout": 0,
       "spell_battle_shout": 0,
+      "spell_misdirection": 0,
       "mana_potion": 16
     },
     {
@@ -902,6 +911,7 @@
       "spell_tranquilizing_shot": 0,
       "spell_commanding_shout": 0,
       "spell_battle_shout": 0,
+      "spell_misdirection": 0,
       "mana_potion": 10
     },
     {
@@ -992,6 +1002,7 @@
       "spell_tranquilizing_shot": 0,
       "spell_commanding_shout": 0,
       "spell_battle_shout": 102,
+      "spell_misdirection": 0,
       "mana_potion": 0
     },
     {
@@ -1082,6 +1093,7 @@
       "spell_tranquilizing_shot": 0,
       "spell_commanding_shout": 0,
       "spell_battle_shout": 0,
+      "spell_misdirection": 0,
       "mana_potion": 1
     },
     {
@@ -1172,6 +1184,7 @@
       "spell_tranquilizing_shot": 0,
       "spell_commanding_shout": 0,
       "spell_battle_shout": 0,
+      "spell_misdirection": 0,
       "mana_potion": 0
     },
     {
@@ -1262,6 +1275,7 @@
       "spell_tranquilizing_shot": 0,
       "spell_commanding_shout": 0,
       "spell_battle_shout": 0,
+      "spell_misdirection": 0,
       "mana_potion": 0
     },
     {
@@ -1352,6 +1366,7 @@
       "spell_tranquilizing_shot": 0,
       "spell_commanding_shout": 0,
       "spell_battle_shout": 0,
+      "spell_misdirection": 0,
       "mana_potion": 2
     },
     {
@@ -1442,6 +1457,7 @@
       "spell_tranquilizing_shot": 0,
       "spell_commanding_shout": 0,
       "spell_battle_shout": 0,
+      "spell_misdirection": 0,
       "mana_potion": 2
     },
     {
@@ -1532,6 +1548,7 @@
       "spell_tranquilizing_shot": 0,
       "spell_commanding_shout": 0,
       "spell_battle_shout": 0,
+      "spell_misdirection": 0,
       "mana_potion": 7
     },
     {
@@ -1622,6 +1639,7 @@
       "spell_tranquilizing_shot": 0,
       "spell_commanding_shout": 0,
       "spell_battle_shout": 0,
+      "spell_misdirection": 15,
       "mana_potion": 4
     },
     {
@@ -1712,6 +1730,7 @@
       "spell_tranquilizing_shot": 0,
       "spell_commanding_shout": 0,
       "spell_battle_shout": 0,
+      "spell_misdirection": 0,
       "mana_potion": 6
     },
     {
@@ -1802,6 +1821,7 @@
       "spell_tranquilizing_shot": 0,
       "spell_commanding_shout": 0,
       "spell_battle_shout": 0,
+      "spell_misdirection": 0,
       "mana_potion": 0
     },
     {
@@ -1892,6 +1912,7 @@
       "spell_tranquilizing_shot": 0,
       "spell_commanding_shout": 0,
       "spell_battle_shout": 0,
+      "spell_misdirection": 0,
       "mana_potion": 0
     },
     {
@@ -1982,6 +2003,7 @@
       "spell_tranquilizing_shot": 0,
       "spell_commanding_shout": 0,
       "spell_battle_shout": 0,
+      "spell_misdirection": 0,
       "mana_potion": 3
     },
     {
@@ -2072,6 +2094,7 @@
       "spell_tranquilizing_shot": 0,
       "spell_commanding_shout": 0,
       "spell_battle_shout": 0,
+      "spell_misdirection": 0,
       "mana_potion": 15
     },
     {
@@ -2162,6 +2185,7 @@
       "spell_tranquilizing_shot": 0,
       "spell_commanding_shout": 0,
       "spell_battle_shout": 0,
+      "spell_misdirection": 0,
       "mana_potion": 15
     },
     {
@@ -2252,6 +2276,7 @@
       "spell_tranquilizing_shot": 0,
       "spell_commanding_shout": 0,
       "spell_battle_shout": 0,
+      "spell_misdirection": 0,
       "mana_potion": 8
     },
     {
@@ -2342,6 +2367,7 @@
       "spell_tranquilizing_shot": 0,
       "spell_commanding_shout": 0,
       "spell_battle_shout": 0,
+      "spell_misdirection": 0,
       "mana_potion": 6
     }
   ],
